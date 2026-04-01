@@ -19,14 +19,14 @@ License: Apache 2.0
 Press "Play" button in Unity HMI.
 
 ## Data format  
-The data format is as follows:
-Assets/
-  HandPoseLogs/
-    session_20260331_xxxxx/
-      images/
-        frame_000000.jpg
-      ARimages/
-        ARframe_000000.jpg
-      logs/
-        handpose_log.csv
+The data format is as follows:  
+Assets/  
+  HandPoseLogs/  
+    session_20260331_xxxxx/  
+      images/  
+        frame_000000.jpg  
+      ARimages/  
+        ARframe_000000.jpg  
+      logs/  
+        handpose_log.csv  
  
