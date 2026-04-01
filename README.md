@@ -21,8 +21,8 @@ Press "Play" button in Unity HMI.
 ## Data format  
 The data format is as follows:  
 Assets/  
-  HandPoseLogs/  
-    session_20260331_xxxxx/  
+<br>HandPoseLogs/  
+<br><br>session_20260331_xxxxx/  
       images/  
         frame_000000.jpg  
       ARimages/  
