@@ -23,10 +23,10 @@ The data format is as follows:
 Assets/  
 &nbsp; HandPoseLogs/  
 &nbsp; &nbsp; session_20260331_xxxxx/  
-      images/  
-        frame_000000.jpg  
-      ARimages/  
-        ARframe_000000.jpg  
-      logs/  
-        handpose_log.csv  
+&nbsp; &nbsp; &nbsp;        images/  
+&nbsp; &nbsp; &nbsp;&nbsp;        frame_000000.jpg  
+&nbsp; &nbsp; &nbsp;       ARimages/  
+&nbsp; &nbsp; &nbsp;&nbsp;         ARframe_000000.jpg  
+&nbsp; &nbsp; &nbsp;       logs/  
+&nbsp; &nbsp; &nbsp;&nbsp;         handpose_log.csv  
  
