@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/hand_tracking.unity
+  isLoaded: 1
+  isActive: 1
