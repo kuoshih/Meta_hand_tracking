@@ -1,4 +1,4 @@
-![alt text](https://github.com/kuoshih/Meta_hand_tracking/blob/master/document/hand_tracking_system.jpg)   
+![alt text](https://github.com/kuoshih/Meta_hand_tracking/blob/master/hand_tracking_system.jpg)   
 
 ## Abstract
 This code is to track hands via Meta2 HMD.
