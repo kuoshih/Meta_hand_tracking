@@ -391,10 +391,10 @@ public class MetaImageRecorder : MonoBehaviour
 		style.normal.textColor = Color.white;
 		style.alignment = TextAnchor.MiddleLeft;
 
-		GUI.Label(new Rect(20, 10, 620, 30), "MetaImageRecorder stable v2026-04-06 DIR only", style);
+		GUI.Label(new Rect(20, 0, 620, 30), "MetaImageRecorder stable v2026-04-06 DIR only", style);
 
-		GUI.Box(new Rect(20, 40, 420, 60), "");
-		GUI.Label(new Rect(30, 50, 400, 40), statusText, style);
+		GUI.Box(new Rect(20, 30, 420, 60), "");
+		GUI.Label(new Rect(30, 40, 400, 40), statusText, style);
 
 		string info =
 			"Head: " + (headTransform != null ? "OK" : "None") + "\n" +
@@ -405,8 +405,8 @@ public class MetaImageRecorder : MonoBehaviour
 			"Webcam: " + ((webcamTexture != null && webcamTexture.isPlaying) ? "OK" : "None") + "\n" +
 			"AR Camera: " + (arOverlayCamera != null ? "OK" : "None");
 
-		GUI.Box(new Rect(20, 110, 420, 170), "");
-		GUI.Label(new Rect(30, 120, 400, 160), info, style);
+		GUI.Box(new Rect(170, 110, 420, 170), "");
+		GUI.Label(new Rect(200, 120, 400, 160), info, style);
 
 		if (GUI.Button(new Rect(20, 290, 140, 50), "Start"))
 		{
