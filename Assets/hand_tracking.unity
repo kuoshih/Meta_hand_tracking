@@ -188,6 +188,71 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4475e147b98e59469ab06ad348bd9e3, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &196689517 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4366690991176724, guid: a4475e147b98e59469ab06ad348bd9e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 196689516}
+--- !u!4 &196689518 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4932937067936892, guid: a4475e147b98e59469ab06ad348bd9e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 196689516}
+--- !u!1 &381272524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 381272526}
+  - component: {fileID: 381272525}
+  m_Layer: 0
+  m_Name: RecorderIMG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &381272525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381272524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04515992e80bbb4fa6c19bf3b45b7aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headTransform: {fileID: 1092663445}
+  leftPalm: {fileID: 1452438233}
+  rightPalm: {fileID: 1323211466}
+  leftTop: {fileID: 196689518}
+  rightTop: {fileID: 196689517}
+  deviceName: Meta2 Webcam
+  requestedWidth: 640
+  requestedHeight: 480
+  requestedFPS: 30
+  arOverlayCamera: {fileID: 1542491502}
+  outputWidth: 640
+  outputHeight: 480
+  logInterval: 0.1
+  fontSize: 18
+  jpgQuality: 90
+--- !u!4 &381272526
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381272524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &686504190 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010685245716, guid: 0f29804ebd89fa1409e93097cbff1a1d,
@@ -260,6 +325,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f29804ebd89fa1409e93097cbff1a1d, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1092663445 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013221008208, guid: 0f29804ebd89fa1409e93097cbff1a1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1092663444}
 --- !u!1 &1107027453
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPalm: {fileID: 1452438233}
   rightPalm: {fileID: 1323211466}
+  leftTop: {fileID: 196689518}
+  rightTop: {fileID: 196689517}
 --- !u!4 &1305135245
 Transform:
   m_ObjectHideFlags: 0
@@ -536,55 +608,3 @@ Camera:
   m_PrefabParentObject: {fileID: 20000013518351888, guid: 0f29804ebd89fa1409e93097cbff1a1d,
     type: 2}
   m_PrefabInternal: {fileID: 1092663444}
---- !u!1 &2114079506
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2114079508}
-  - component: {fileID: 2114079507}
-  m_Layer: 0
-  m_Name: RecorderIMG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2114079507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2114079506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04515992e80bbb4fa6c19bf3b45b7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftPalm: {fileID: 1452438233}
-  rightPalm: {fileID: 1323211466}
-  deviceName: Meta2 Webcam
-  requestedWidth: 640
-  requestedHeight: 480
-  requestedFPS: 30
-  captureCamera: {fileID: 1542491502}
-  arImageWidth: 640
-  arImageHeight: 480
-  logInterval: 0.1
-  fontSize: 20
-  jpgQuality: 90
---- !u!4 &2114079508
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2114079506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
