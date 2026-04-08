@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\HandPoseCsvAndImageRecorder.cs" />
      <Compile Include="Assets\MetaImageRecorder.cs" />
      <Compile Include="Assets\MetaSDK\Meta\Binding\Api\ButtonApi.cs" />
      <Compile Include="Assets\MetaSDK\Meta\Binding\Api\CameraApi.cs" />
