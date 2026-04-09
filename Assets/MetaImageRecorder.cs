@@ -25,14 +25,6 @@ public class MetaImageRecorder : MonoBehaviour
 	public int outputWidth = 640;
 	public int outputHeight = 480;
 
-	[Header("Arrow Display")]
-	public bool showDirectionArrows = true;
-	public float arrowLength = 0.08f;
-	public float shaftRadius = 0.004f;
-	public float tipRadius = 0.009f;
-	public Color leftArrowColor = Color.yellow;
-	public Color rightArrowColor = Color.cyan;
-
 	[Header("Logging")]
 	public float logInterval = 0.1f;
 	public int fontSize = 18;
@@ -56,28 +48,14 @@ public class MetaImageRecorder : MonoBehaviour
 	private Vector3 leftDir = Vector3.zero;
 	private Vector3 rightDir = Vector3.zero;
 
-	// Arrow objects
-	private GameObject leftArrowRoot;
-	private GameObject rightArrowRoot;
-	private Transform leftArrowShaft;
-	private Transform leftArrowTip;
-	private Transform rightArrowShaft;
-	private Transform rightArrowTip;
-
 	void Start()
 	{
 		InitializeWebcam();
-
-		if (showDirectionArrows)
-		{
-			CreateDirectionArrowObjects();
-		}
 	}
 
 	void Update()
 	{
 		UpdateDirections();
-		UpdateDirectionArrowObjects();
 
 		if (Input.GetKeyDown(KeyCode.R))
 		{
@@ -93,19 +71,6 @@ public class MetaImageRecorder : MonoBehaviour
 		{
 			nextLogTime = Time.time + logInterval;
 			CaptureAndWrite();
-		}
-
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			showDirectionArrows = !showDirectionArrows;
-
-			if (leftArrowRoot != null)
-				leftArrowRoot.SetActive(showDirectionArrows);
-
-			if (rightArrowRoot != null)
-				rightArrowRoot.SetActive(showDirectionArrows);
-
-			Debug.Log("Arrow display: " + (showDirectionArrows ? "ON" : "OFF"));
 		}
 	}
 
@@ -171,98 +136,6 @@ public class MetaImageRecorder : MonoBehaviour
 		{
 			rightDir = Vector3.zero;
 		}
-	}
-
-	void CreateDirectionArrowObjects()
-	{
-		leftArrowRoot = CreateSingleArrow("LeftDirArrow", leftArrowColor, out leftArrowShaft, out leftArrowTip);
-		rightArrowRoot = CreateSingleArrow("RightDirArrow", rightArrowColor, out rightArrowShaft, out rightArrowTip);
-	}
-
-	GameObject CreateSingleArrow(string rootName, Color color, out Transform shaft, out Transform tip)
-	{
-		GameObject root = new GameObject(rootName);
-
-		GameObject shaftObj = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-		shaftObj.name = "Shaft";
-		DestroyIfColliderExists(shaftObj);
-		shaftObj.transform.SetParent(root.transform, false);
-
-		GameObject tipObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-		tipObj.name = "Tip";
-		DestroyIfColliderExists(tipObj);
-		tipObj.transform.SetParent(root.transform, false);
-
-		ApplyColor(shaftObj, color);
-		ApplyColor(tipObj, color);
-
-		shaft = shaftObj.transform;
-		tip = tipObj.transform;
-
-		return root;
-	}
-
-	void DestroyIfColliderExists(GameObject obj)
-	{
-		Collider c = obj.GetComponent<Collider>();
-		if (c != null)
-		{
-			Destroy(c);
-		}
-	}
-
-	void ApplyColor(GameObject obj, Color color)
-	{
-		Renderer r = obj.GetComponent<Renderer>();
-		if (r != null)
-		{
-			Material m = new Material(Shader.Find("Standard"));
-			m.color = color;
-			r.material = m;
-		}
-	}
-
-	void UpdateDirectionArrowObjects()
-	{
-		if (!showDirectionArrows)
-		{
-			if (leftArrowRoot != null) leftArrowRoot.SetActive(false);
-			if (rightArrowRoot != null) rightArrowRoot.SetActive(false);
-			return;
-		}
-
-		if (leftArrowRoot != null) leftArrowRoot.SetActive(true);
-		if (rightArrowRoot != null) rightArrowRoot.SetActive(true);
-
-		UpdateSingleArrow(leftArrowRoot, leftArrowShaft, leftArrowTip, leftPalm, leftDir);
-		UpdateSingleArrow(rightArrowRoot, rightArrowShaft, rightArrowTip, rightPalm, rightDir);
-	}
-
-	void UpdateSingleArrow(GameObject root, Transform shaft, Transform tip, Transform palm, Vector3 dir)
-	{
-		if (root == null || shaft == null || tip == null)
-			return;
-
-		bool valid = (palm != null && dir.sqrMagnitude > 0.000001f);
-		root.SetActive(valid);
-
-		if (!valid)
-			return;
-
-		root.transform.position = palm.position;
-		root.transform.rotation = Quaternion.FromToRotation(Vector3.up, dir);
-
-		// Cylinder 預設高度是 2，所以 localScale.y = 實際長度 / 2
-		float shaftLength = arrowLength * 0.75f;
-		float tipOffset = arrowLength * 0.90f;
-
-		shaft.localPosition = new Vector3(0f, shaftLength * 0.5f, 0f);
-		shaft.localRotation = Quaternion.identity;
-		shaft.localScale = new Vector3(shaftRadius, shaftLength * 0.5f, shaftRadius);
-
-		tip.localPosition = new Vector3(0f, tipOffset, 0f);
-		tip.localRotation = Quaternion.identity;
-		tip.localScale = new Vector3(tipRadius, tipRadius, tipRadius);
 	}
 
 	public void StartRecording()
@@ -518,7 +391,7 @@ public class MetaImageRecorder : MonoBehaviour
 		style.normal.textColor = Color.white;
 		style.alignment = TextAnchor.MiddleLeft;
 
-		GUI.Label(new Rect(170, 0, 680, 30), "MetaImageRecorder + Direction Arrows", style);
+		GUI.Label(new Rect(170, 0, 680, 30), "MetaImageRecorder stable no AR arrows", style);
 
 		GUI.Box(new Rect(170, 30, 420, 60), "");
 		GUI.Label(new Rect(180, 40, 400, 40), statusText, style);
@@ -563,7 +436,7 @@ public class MetaImageRecorder : MonoBehaviour
 		GUI.Label(
 			new Rect(30, 470, 680, 120),
 			"R：開始\nT：停止\n" +
-			"手掌方向箭頭會顯示在 AR 螢幕上\n" +
+			"已停用 AR 箭頭顯示，先以穩定不當機為主\n" +
 			"handpose_log.csv：時間 + head + left/right palm + top + dir\n" +
 			"images = 純相機影像\n" +
 			"ARimages = 相機 + AR 疊圖",

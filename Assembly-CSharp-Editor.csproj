@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{15366067-DCE7-F240-6CC5-45A09E7E87A1}</ProjectGuid>
+    <ProjectGuid>{37B1D7FB-0AD0-AFF7-A04C-CD1CEA7CE4DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -148,22 +148,22 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Editor/Managed/NSubstitute.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Editor/Managed/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="FlatBuffers">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Managed/FlatBuffers.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Managed/FlatBuffers.dll</HintPath>
  </Reference>
  <Reference Include="FullSerializer">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Managed/FullSerializer.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Managed/FullSerializer.dll</HintPath>
  </Reference>
  <Reference Include="MetaAnalytics">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Managed/MetaAnalytics.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Managed/MetaAnalytics.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Managed/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Managed/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="SimpleJSON">
- <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking/Assets/MetaSDK/Plugins/Managed/SimpleJSON.dll</HintPath>
+ <HintPath>C:/Users/Kuo-Shih Tseng/Desktop/Meta_hand_tracking (broken)/Assets/MetaSDK/Plugins/Managed/SimpleJSON.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/Kuo-Shih Tseng/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
@@ -189,7 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{BAEACC42-93AA-2883-CBFC-A71C7FA3B24E}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{A4F155AA-BEB8-C179-4229-44148E07AD78}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

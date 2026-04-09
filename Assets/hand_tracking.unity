@@ -237,6 +237,12 @@ MonoBehaviour:
   arOverlayCamera: {fileID: 1542491502}
   outputWidth: 640
   outputHeight: 480
+  showDirectionArrows: 0
+  arrowLength: 0.08
+  shaftRadius: 0.004
+  tipRadius: 0.009
+  leftArrowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  rightArrowColor: {r: 0, g: 1, b: 1, a: 1}
   logInterval: 0.1
   fontSize: 18
   jpgQuality: 90
@@ -321,6 +327,21 @@ Prefab:
         type: 2}
       propertyPath: _enable2DWarp
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000013518351888, guid: 0f29804ebd89fa1409e93097cbff1a1d,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012647723092, guid: 0f29804ebd89fa1409e93097cbff1a1d,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000012655699110, guid: 0f29804ebd89fa1409e93097cbff1a1d,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f29804ebd89fa1409e93097cbff1a1d, type: 2}
